@@ -10,14 +10,13 @@ COPY . .
 
 RUN npm run build
 
-
 # ---------- STAGE 2: Nginx ----------
 FROM nginx:alpine
 
 RUN rm -rf /usr/share/nginx/html/*
 
-# Angular 17/18 → dist/<project>/browser
-COPY --from=build /app/dist/*/browser/ /usr/share/nginx/html/
+# Подставь имя проекта из dist/<project-name>
+COPY --from=build /app/dist/Blockchain/ /usr/share/nginx/html/
 
 EXPOSE 80
 
