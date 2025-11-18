@@ -1,0 +1,87 @@
+[
+  {
+    "inputs": [
+      { "internalType": "enum RockPaperScissorsMulti.Move", "name": "_move", "type": "uint8" },
+      { "internalType": "uint8", "name": "_maxPlayers", "type": "uint8" }
+    ],
+    "name": "createGame",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_gameId", "type": "uint256" },
+      { "internalType": "enum RockPaperScissorsMulti.Move", "name": "_move", "type": "uint8" }
+    ],
+    "name": "joinGame",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getGamesCount",
+    "outputs": [
+      { "internalType": "uint256", "name": "", "type": "uint256" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_gameId", "type": "uint256" }
+    ],
+    "name": "getGame",
+    "outputs": [
+      { "internalType": "address[]", "name": "players", "type": "address[]" },
+      { "internalType": "uint256", "name": "betAmount", "type": "uint256" },
+      { "internalType": "uint8", "name": "maxPlayers", "type": "uint8" },
+      { "internalType": "bool", "name": "finished", "type": "bool" },
+      { "internalType": "enum RockPaperScissorsMulti.Result", "name": "result", "type": "uint8" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "uint256", "name": "_gameId", "type": "uint256" },
+      { "internalType": "address", "name": "player", "type": "address" }
+    ],
+    "name": "getPlayerMove",
+    "outputs": [
+      { "internalType": "enum RockPaperScissorsMulti.Move", "name": "", "type": "uint8" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": false, "internalType": "uint256", "name": "gameId", "type": "uint256" },
+      { "indexed": false, "internalType": "address", "name": "creator", "type": "address" },
+      { "indexed": false, "internalType": "uint8", "name": "maxPlayers", "type": "uint8" },
+      { "indexed": false, "internalType": "uint256", "name": "bet", "type": "uint256" }
+    ],
+    "name": "GameCreated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": false, "internalType": "uint256", "name": "gameId", "type": "uint256" },
+      { "indexed": false, "internalType": "address", "name": "player", "type": "address" }
+    ],
+    "name": "PlayerJoined",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      { "indexed": false, "internalType": "uint256", "name": "gameId", "type": "uint256" },
+      { "indexed": false, "internalType": "enum RockPaperScissorsMulti.Result", "name": "result", "type": "uint8" }
+    ],
+    "name": "GameFinished",
+    "type": "event"
+  }
+]

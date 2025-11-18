@@ -1,0 +1,22 @@
+<div class="moves">
+  <button
+    class="move-btn"
+    [class.active]="selectedMove === 1"
+    (click)="select(1)">
+    🪨 Rock
+  </button>
+
+  <button
+    class="move-btn"
+    [class.active]="selectedMove === 2"
+    (click)="select(2)">
+    📄 Paper
+  </button>
+
+  <button
+    class="move-btn"
+    [class.active]="selectedMove === 3"
+    (click)="select(3)">
+    ✂️ Scissors
+  </button>
+</div>

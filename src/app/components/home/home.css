@@ -1,0 +1,70 @@
+/* Home container */
+.home {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Wallet section */
+.wallet-section {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.btn-wallet {
+  padding: 10px 18px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-wallet:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.wallet-connected {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Section cards for app components */
+.section-card {
+  background-color: #fefefe;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.section-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .home {
+    padding: 12px;
+  }
+
+  .section-card {
+    padding: 16px;
+  }
+
+  .btn-wallet {
+    width: 100%;
+  }
+}
+.games{
+  max-width: 80%;
+  margin: 0 auto;
+}

@@ -1,0 +1,15 @@
+<div class="home">
+  <div class="wallet-section">
+    <button class="btn-wallet" *ngIf="!userAddress" (click)="connectWallet()">Connect Wallet</button>
+    <p class="wallet-connected" *ngIf="userAddress">Connected: {{ userAddress }}</p>
+  </div>
+
+  <app-create-game class="section-card"></app-create-game>
+
+  <app-join-game class="section-card"></app-join-game>
+
+</div>
+
+<div class="games">
+  <app-completed-games></app-completed-games>
+</div>

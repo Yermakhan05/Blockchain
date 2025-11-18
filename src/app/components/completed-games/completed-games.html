@@ -1,0 +1,21 @@
+<h2>Completed Games</h2>
+<table class="games-table">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Players</th>
+    <th>Bet (ETH)</th>
+    <th>Max Players</th>
+    <th>Result</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let game of completedGames; let i = index">
+    <td>{{ i }}</td>
+    <td>{{ game.players?.join(', ') }}</td>
+    <td>{{ game.betAmount }}</td>
+    <td>{{ game.maxPlayers }}</td>
+    <td>{{ getResultText(game) }}</td>
+  </tr>
+  </tbody>
+</table>

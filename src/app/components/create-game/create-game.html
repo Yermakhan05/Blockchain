@@ -1,0 +1,14 @@
+<h2 class="section-title">Create Game</h2>
+
+<div class="create-game-card">
+  <app-move-selector class="move-selector" (moveSelected)="selectedMove = $event"></app-move-selector>
+
+  <label class="form-label">Max Players:</label>
+  <select class="form-select" [(ngModel)]="maxPlayers">
+    <option [value]="2">2</option>
+    <option [value]="3">3</option>
+    <option [value]="4">4</option>
+  </select>
+
+  <button class="btn-create" (click)="createGame()">Create Game</button>
+</div>

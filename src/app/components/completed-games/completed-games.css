@@ -1,0 +1,36 @@
+.games-table {
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.games-table th,
+.games-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.games-table thead {
+  background-color: #4CAF50;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.games-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.games-table tbody tr:hover {
+  background-color: #f1f7ff;
+  transition: 0.3s;
+}
+
+h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  margin-bottom: 10px;
+}
