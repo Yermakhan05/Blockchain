@@ -1,5 +1,5 @@
 # ---------- STAGE 1: Build ----------
-FROM node:18-alpine AS build
+FROM node:22-alpine AS build
 
 WORKDIR /app
 
@@ -16,7 +16,7 @@ FROM nginx:alpine
 
 RUN rm -rf /usr/share/nginx/html/*
 
-# Универсальный путь: находит любую папку внутри dist и копирует browser
+# Angular 17/18 → dist/<project>/browser
 COPY --from=build /app/dist/*/browser/ /usr/share/nginx/html/
 
 EXPOSE 80
